@@ -1,0 +1,212 @@
+[
+  {
+    "name": "arms_uid",
+    "value": "f7ffd408-d628-4aff-a10b-14a1f4c895ee",
+    "domain": "login.dingtalk.com",
+    "path": "/oauth2",
+    "expires": 1789316620.71955,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "XSRF-TOKEN",
+    "value": "a1cf80d5-089a-43f3-a1e7-d1c06897ebf3",
+    "domain": "alidocs.dingtalk.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cna",
+    "value": "tBNb4LZLPuMOGiJoVoVBdDen",
+    "domain": ".dingtalk.com",
+    "path": "/",
+    "expires": 1808324605.626822,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "xlly_s",
+    "value": "1",
+    "domain": ".dingtalk.com",
+    "path": "/",
+    "expires": 1774023806,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "cbc",
+    "value": "T2gADNyYzJtO3ih5RPvzBZhMuRKM-gmfxFOhRU81WIZeKNJYKv3P2vssdoaD__yRK3g=",
+    "domain": ".alibaba.com",
+    "path": "/",
+    "expires": 1805300607.173539,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "cna",
+    "value": "/21AIsRbQAsCASuZcuYNQKAl",
+    "domain": ".mmstat.com",
+    "path": "/",
+    "expires": 1808324621.758623,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "sca",
+    "value": "774aa1b1",
+    "domain": ".mmstat.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "cbc",
+    "value": "T2gAXSDhRMPO45TcHKXYbqPXTQm3S5uDuLOXts2TAzE0AuHFRFvFQdbYEaJcoyGywEQ=",
+    "domain": ".ynuf.aliapp.org",
+    "path": "/",
+    "expires": 1805300607.596413,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "stayLogin",
+    "value": "false",
+    "domain": "login.dingtalk.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": false
+  },
+  {
+    "name": "account",
+    "value": "oauth_k1%3A1eaWQrsT7owLuTtyrqiExkhkYpizx%2B8kdjvFeJxRzB8GO%2FevWYF%2FJWx6bwYaX596l8LhMEv9iUUG%2FYNojtcokpkEF2cEsnEOJQjT0DcXzAE%3D",
+    "domain": ".dingtalk.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": false
+  },
+  {
+    "name": "deviceid",
+    "value": "ca4d07adca4a4448b96fbd5daad6ad49",
+    "domain": ".dingtalk.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": false
+  },
+  {
+    "name": "pub_uid",
+    "value": "bAffPaITjtULNE7PvARUpw%3D%3D",
+    "domain": ".dingtalk.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": false
+  },
+  {
+    "name": "tfstk",
+    "value": "gFwrAl6bFv4bh7_gblDFQOT2CDM-Hv7srJgIxkqnV40uRYTFLrubduZQFDDUkzh3FYZ7uyzQbpaItY0eYyamd7ZQFpP4ylc78kI-x24382N5GOZ82vHh5yW1CuBXrl70UvYQmYnIJXkj3OZ82vKy-GNcC9WGpxun-ycoinmZoQmoqymmiqnKxUmHEirmkqmH-b0nnImi43DnKyqc0D3mqvcu-ojqvq0HrLln_KoKZgXGf0bcK-lrSu02LuwqqbR8qqJHK-PqaVvEupv330rhgAdpEOu0NW2Sn8bDWxqTGzmqQ9-E05rmE0zdBLHujoVnaJ5BX2F4m5G4M3s-08raLclXoguLFzyEwRb6H4V4HJk7GaJsJXVbefe5oLkg6uM7trjHK2Pmxg7wJmb50ib6-BloDmu10i2AxHEWwaH-qBdKNEnq5gjk9Bhodmu10adp9bhx0VslV",
+    "domain": ".dingtalk.com",
+    "path": "/",
+    "expires": 1789316606,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "doc_atoken",
+    "value": "NDEyMjcyMjURJQUYuFuzSNlFVwHPxDsfEZWRMiczjDX",
+    "domain": ".dingtalk.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": false
+  },
+  {
+    "name": "atpsida",
+    "value": "43938cc66069f173fae43716_1773764621_2",
+    "domain": ".mmstat.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "arms_uid",
+    "value": "4ab051dd-36ac-477a-8fa2-2011d08e9c5e",
+    "domain": "alidocs.dingtalk.com",
+    "path": "/",
+    "expires": 1789316621.88864,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://dingtalk.com",
+    "_crHasCrossSiteAncestor": false
+  },
+  {
+    "name": "RECENT_OPEN_DOC_KEYS",
+    "value": "ZWGl05mgV02LAn34",
+    "domain": ".dingtalk.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "ding_doc_unified_login",
+    "value": "false",
+    "domain": "alidocs.dingtalk.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "XSRF-TOKEN",
+    "value": "96f3a294-9e58-4d31-b791-429c36b18c18",
+    "domain": "collab.dingtalk.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": true,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]
