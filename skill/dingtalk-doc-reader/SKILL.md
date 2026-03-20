@@ -6,7 +6,7 @@ disable-model-invocation: false
 
 ## 当前登录状态
 
-!`node -e "const {hasUsableAuthState} = await import('/Users/jxgu/CodeSpace/NodeSpace/openkit/skill/dingtalk-doc-reader/src/auth.js'); console.log(hasUsableAuthState() ? 'AUTH_OK' : 'AUTH_MISSING');" 2>/dev/null || echo "AUTH_CHECK_FAILED"`
+!`node -e "const {hasUsableAuthState} = await import('./src/auth.js'); console.log(hasUsableAuthState() ? 'AUTH_OK' : 'AUTH_MISSING');" 2>/dev/null || echo "AUTH_CHECK_FAILED"`
 
 ## 使用说明
 
@@ -31,7 +31,7 @@ disable-model-invocation: false
 从 `$ARGUMENTS` 中提取钉钉文档 URL，运行以下命令读取文档：
 
 ```bash
-node src/read.js "<文档URL>"
+node ./src/read.js "<文档URL>"
 ```
 
 从命令输出中提取 `输出目录` 路径（形如 `/tmp/dingtalk-doc-reader/2026-xx-xxTxx-xx-xx`）。
