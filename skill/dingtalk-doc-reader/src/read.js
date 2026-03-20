@@ -1511,6 +1511,21 @@ function assetMapFromList(assets) {
   return new Map(assets.map((asset) => [asset.id, asset]));
 }
 
+function serializeAsset(asset) {
+  return {
+    id: asset.id,
+    alt: asset.alt,
+    fileName: asset.fileName,
+    filePath: asset.filePath,
+    mimeType: asset.mimeType,
+    sourceUrl: asset.sourceUrl,
+    width: asset.width,
+    height: asset.height,
+    relativePath: asset.relativePath || asset.markdownPath,
+    markdownPath: asset.markdownPath,
+  };
+}
+
 function mergeCommentAssets(commentItems, savedAssets) {
   const savedById = assetMapFromList(savedAssets);
   return commentItems.map((comment) => ({
@@ -1518,14 +1533,7 @@ function mergeCommentAssets(commentItems, savedAssets) {
     assets: comment.assets
       .map((asset) => savedById.get(asset.id))
       .filter(Boolean)
-      .map((asset) => ({
-        id: asset.id,
-        sourceUrl: asset.sourceUrl,
-        width: asset.width,
-        height: asset.height,
-        relativePath: asset.relativePath || asset.markdownPath,
-        markdownPath: asset.markdownPath,
-      })),
+      .map(serializeAsset),
   }));
 }
 
@@ -1537,8 +1545,6 @@ export async function readDocument(url, options = {}) {
   }
 
   console.log('🚀 开始读取文档...');
-  console.log(`📄 目标URL: ${url}`);
-  console.log(`🖥️ 无头模式: ${headless}`);
 
   const outputDir = generateOutputDir();
   ensureOutputDir(outputDir);
@@ -1558,7 +1564,6 @@ export async function readDocument(url, options = {}) {
     }
 
     if (!docResponse) {
-      console.log('🔄 未捕获到正文接口响应，重试一次页面加载...');
       ({ frame } = await openDingTalkDocument(page, url));
       docResponse = pickMainDocumentResponse(collector.documentResponses, frame.url());
     }
@@ -1599,14 +1604,7 @@ export async function readDocument(url, options = {}) {
       content: {
         rawText: content.rawText,
         blocks: content.blocks,
-        assets: contentAssets.map((asset) => ({
-          id: asset.id,
-          sourceUrl: asset.sourceUrl,
-          width: asset.width,
-          height: asset.height,
-          relativePath: asset.relativePath || asset.markdownPath,
-          markdownPath: asset.markdownPath,
-        })),
+        assets: contentAssets.map(serializeAsset),
         html: renderBlocksAsHtml(content.blocks, contentAssetsById),
       },
       comments: {
@@ -1621,14 +1619,7 @@ export async function readDocument(url, options = {}) {
           assets: comment.assets,
           html: renderBlocksAsHtml(comment.blocks, commentAssetsById) || buildFallbackHtml(comment.summary || comment.rawText),
         })),
-        assets: commentAssets.map((asset) => ({
-          id: asset.id,
-          sourceUrl: asset.sourceUrl,
-          width: asset.width,
-          height: asset.height,
-          relativePath: asset.relativePath || asset.markdownPath,
-          markdownPath: asset.markdownPath,
-        })),
+        assets: commentAssets.map(serializeAsset),
       },
     };
 
@@ -1642,8 +1633,6 @@ export async function readDocument(url, options = {}) {
 
     console.log('\n🎉 文档读取完成！');
     console.log(`📁 输出目录: ${outputDir}`);
-    console.log(`🌐 HTML: document.html`);
-    console.log(`🧾 结构化结果: document.json`);
 
     return result;
   } finally {

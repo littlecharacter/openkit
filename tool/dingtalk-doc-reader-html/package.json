@@ -1,0 +1,16 @@
+{
+  "name": "dingtalk-doc-reader",
+  "version": "1.0.0",
+  "description": "钉钉文档登录认证与结构化读取工具",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "login": "node src/login.js",
+    "start": "node src/index.js",
+    "read": "node src/read.js",
+    "mcp": "node src/mcp.js"
+  },
+  "dependencies": {
+    "playwright": "^1.42.0"
+  }
+}

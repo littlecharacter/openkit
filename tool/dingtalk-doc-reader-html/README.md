@@ -22,6 +22,9 @@ npm run start -- <钉钉文档URL>
 # 直接读取文档
 npm run read -- <钉钉文档URL>
 
+# 启动 MCP server（stdio）
+npm run mcp
+
 # 可见模式运行读取，便于调试
 npm run read -- <钉钉文档URL> --visible
 ```
@@ -59,3 +62,29 @@ output/
 - 最终只输出一个 `document.html`，其中包含正文和评论两个部分
 - 评论会优先尝试多个文档标识对应的接口，避免只依赖单一路径
 - 如果需要重新登录，删除 `auth/` 目录下的文件后重新运行即可
+
+## MCP
+
+项目现在可以直接作为一个 `stdio MCP server` 启动：
+
+```bash
+npm run mcp
+```
+
+它提供两把工具：
+
+- `read_dingtalk_doc`
+  - 输入钉钉文档 URL
+  - 返回正文文字、正文 HTML、评论文字、评论 HTML、正文图片清单、评论图片清单
+  - 默认只返回图片元信息和本地文件路径；如果需要，也可以通过 `include_image_data=true` 内联少量图片 data URI
+
+- `read_dingtalk_doc_asset`
+  - 输入 `read_dingtalk_doc` 返回的 `filePath`
+  - 返回该图片的 `dataUri/base64`、MIME 类型和文件大小
+
+推荐的调用方式是：
+
+1. 先用 `read_dingtalk_doc` 读取正文和评论，同时拿到图片清单
+2. 再按需对某几张图片调用 `read_dingtalk_doc_asset`
+
+这样既能完整读取“文字 + 图片”，也不会因为一次内联太多图片把 MCP 响应撑得过大。
